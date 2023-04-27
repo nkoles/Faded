@@ -81,6 +81,15 @@ public class EnemyDetection : MonoBehaviour
         
         if (rotationTimer == 20)
         {
+            enemyTransform.transform.rotation = Quaternion.Euler(0, 0, 0);
+            
+            var playerHitDown = Physics2D.Raycast(transform.position, Vector2.right, 5.0f, player);
+            
+            if (playerHitDown.collider != null && Input.GetKey(KeyCode.E))
+            {
+                Debug.Log("Player Detected");
+            }
+            
             rotationTimerFloat = 0.0f;
         }
     }
