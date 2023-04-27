@@ -7,10 +7,10 @@ public class PlayerMove : MonoBehaviour
 
     public float gridSize = 1f;
     private GameObject player;
-    private KeyCode moveUp = KeyCode.W;
-    private KeyCode moveDown = KeyCode.S;
-    private KeyCode moveRight = KeyCode.D;
-    private KeyCode moveLeft = KeyCode.A;
+    public KeyCode moveUp = KeyCode.W;
+    public KeyCode moveDown = KeyCode.S;
+    public KeyCode moveRight = KeyCode.D;
+    public KeyCode moveLeft = KeyCode.A;
     private BoxCollider2D boxCollider;
     public LayerMask wall;
 
