@@ -24,12 +24,12 @@ public class AnimationController : MonoBehaviour
         {
             if (alternate)
             {
-                anim.SetTrigger("StepL");
+                anim.SetTrigger("LStep");
                 Debug.Log("Left");
             }
             else
             {
-                anim.SetTrigger("StepR");
+                anim.SetTrigger("RStep");
             }
 
             alternate = !alternate;
