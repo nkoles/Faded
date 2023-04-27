@@ -27,22 +27,22 @@ public class RoomGenerationScript : MonoBehaviour
             {
                     case(1):
                     random = (int)Random.Range(0, 3);
-                    Instantiate(roomListLeft[random], transform.position, roomListLeft[random].transform.rotation);
+                    Instantiate(roomListRight[random], transform.position, roomListRight[random].transform.rotation);
                     break;
 
                     case(2):
                     random = (int)Random.Range(0, 3);
-                    Instantiate(roomListRight[random], transform.position, roomListRight[random].transform.rotation);
+                    Instantiate(roomListLeft[random], transform.position, roomListLeft[random].transform.rotation);
                     break;
 
                     case(3):
                     random = (int)Random.Range(0, 3);
-                    Instantiate(roomListUp[random], transform.position, roomListUp[random].transform.rotation);
+                    Instantiate(roomListDown[random], transform.position, roomListDown[random].transform.rotation);
                     break;
 
                     case(4):
                     random = (int)Random.Range(0, 3);
-                    Instantiate(roomListDown[random], transform.position, roomListDown[random].transform.rotation);
+                    Instantiate(roomListUp[random], transform.position, roomListUp[random].transform.rotation);
                     break;
             }
 
@@ -50,9 +50,9 @@ public class RoomGenerationScript : MonoBehaviour
         }
     }
 
-    void OnCollider2D(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("SpawnP") == true  && other.GetComponent<RoomGenerationScript>().spawned == true)
+        if(other.CompareTag("SpawnP") && other.GetComponent<RoomGenerationScript>().spawned == true)
         {
             Destroy(gameObject);
         }
