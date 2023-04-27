@@ -11,7 +11,12 @@ public class SmokingMechanic : MonoBehaviour
     private float smokeHeldTimer = 0f;
     
     private KeyCode smokeKey = KeyCode.E;
-    
+
+    private float smokeAdd;
+    public float smokeAddMax = 5f;
+    public float smokeCooldown = 5f;
+    public float smokeMaxCooldown = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,24 +31,32 @@ public class SmokingMechanic : MonoBehaviour
     
     private void takeSmoke ()
     {
-        if(Input.GetKeyDown(smokeKey))
+        if (Input.GetKey(smokeKey))
         {
-            StartCoroutine(smokeHeld)
+            
+            smokeHeldTimer += Time.deltaTime;
+            smokeAdd = smokeAddMax - smokeHeldTimer;
+            smokeAdd = Mathf.Clamp(smokeAdd, 0f, smokeAddMax);
+            smokeNeed += smokeAdd * Time.deltaTime;
+        }
+            
+        else
+        {
+            
+            smokeHeldTimer -= smokeCooldown * Time.deltaTime;
+            
         }
         
-        
-        Debug.Log(smokeHeldTimer);
-    }
-
-    private void smokeHeld()
-    {
+        smokeHeldTimer = Mathf.Clamp(smokeHeldTimer, 0f, smokeMaxCooldown);
         
     }
+    
 
     private void FixedUpdate()
     {
-        needDecrease();
         takeSmoke();
+        needDecrease();
+        
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
