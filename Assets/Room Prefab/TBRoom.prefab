@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4484654236571804697}
   - component: {fileID: 1312859982165291391}
   - component: {fileID: 6757734822969574099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: SpawnP
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5981434232879704192}
   - component: {fileID: 9182126744321466842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5915567982970984680}
   - component: {fileID: 8164780121656384612}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2383957708278579495}
   - component: {fileID: 5799877243652978921}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4940518397097542197}
   - component: {fileID: 2844075017498415489}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814636699882422779}
   - component: {fileID: 3714725348065894187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6919672628035690361}
   - component: {fileID: 4458944782930369066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 3263661676799007577}
   - component: {fileID: 3657262746674660098}
   - component: {fileID: 4861979325136395541}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (1)
   m_TagString: SpawnP
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -919,7 +919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164068333447482988}
   - component: {fileID: 149026536648095424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544517274644204637}
   - component: {fileID: 1109853735739609261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
