@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DestroyOverlapObjects : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Room") && other.gameObject.GetComponent<CircleCollider2D>() == true)
+        if(other.gameObject.layer == 3 && other.gameObject.GetComponent<CircleCollider2D>() == true)
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
