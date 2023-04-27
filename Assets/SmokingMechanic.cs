@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SmokingMechanic : MonoBehaviour
 {
-    
+    public Image cigaretteUI;
+    public Image lungSmokeNeed;
+
     public float smokeNeed = 100f;
     public float smokeDecrease = 0.1f;
     private float smokeHeldTimer = 0f;
@@ -20,13 +23,18 @@ public class SmokingMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        cigaretteUI.fillAmount = 1-smokeHeldTimer/12;
         
+
+
+        var lungColor = lungSmokeNeed.color;
+        lungColor.a = 1 - smokeNeed/100;
+        lungSmokeNeed.color = lungColor;
     }
     
     private void takeSmoke ()
