@@ -470,8 +470,6 @@ PrefabInstance:
     - target: {fileID: 5209762606884346923, guid: 1ca3297a07f446243a1822959c2d9a59, type: 3}
       propertyPath: smokeCooldown
       value: 1.5
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca3297a07f446243a1822959c2d9a59, type: 3}
@@ -511,8 +509,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_BackGroundColor: {r: 0.4556537, g: 0.46226418, b: 0.4121129, a: 0}
+  m_BackGroundColor: {r: 0.6981132, g: 0.60914874, b: 0.4182093, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -660,7 +657,7 @@ Transform:
   - {fileID: 7827450}
   - {fileID: 522861161}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1529010905
 BoxCollider2D:
