@@ -6,7 +6,7 @@ public class DestroyOverlapObjects : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.layer == 3 && other.gameObject.GetComponent<CircleCollider2D>() == true)
+        if(other.gameObject.tag == "SpawnP")
         {
             Destroy(other.gameObject);
         }
