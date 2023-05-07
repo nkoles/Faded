@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyDetection : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EnemyDetection : MonoBehaviour
     public int rotationTimer = 0;
     private Transform enemyTransform;
     public LayerMask player;
+    public bool detected;
+    private GameObject Player;
     
 
 
@@ -18,6 +21,7 @@ public class EnemyDetection : MonoBehaviour
     void Start()
     {
         enemyTransform = enemy.GetComponent<Transform>();
+        Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -27,9 +31,9 @@ public class EnemyDetection : MonoBehaviour
         rotationTimer = (int)rotationTimerFloat;
         
         rotate();
-        
+        playerDetected();
     }
-    
+
     void rotate()
     {
 
@@ -40,6 +44,7 @@ public class EnemyDetection : MonoBehaviour
             if (playerHitRight.collider != null && Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Player Detected");
+                detected = true;
             }
         }
 
@@ -52,6 +57,7 @@ public class EnemyDetection : MonoBehaviour
             if (playerHitUp.collider != null && Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Player Detected");
+                detected = true;
             }
         }
 
@@ -64,6 +70,7 @@ public class EnemyDetection : MonoBehaviour
             if (playerHitLeft.collider != null && Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Player Detected");
+                detected = true;
             }
         }
 
@@ -76,6 +83,7 @@ public class EnemyDetection : MonoBehaviour
             if (playerHitDown.collider != null && Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Player Detected");
+                detected = true;
             }
         }
         
@@ -88,9 +96,29 @@ public class EnemyDetection : MonoBehaviour
             if (playerHitDown.collider != null && Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Player Detected");
+                detected = true;
             }
             
             rotationTimerFloat = 0.0f;
+        }
+    }
+
+    void playerDetected()
+    {
+        if(detected)
+        {
+            Vector3 playerDir = Player.transform.position - transform.position;
+            float speed = 0.5f;
+
+            transform.Translate(playerDir*Time.deltaTime);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

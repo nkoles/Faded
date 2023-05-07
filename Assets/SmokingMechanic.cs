@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SmokingMechanic : MonoBehaviour
 {
@@ -35,6 +36,11 @@ public class SmokingMechanic : MonoBehaviour
         var lungColor = lungSmokeNeed.color;
         lungColor.a = 1 - smokeNeed/100;
         lungSmokeNeed.color = lungColor;
+
+        if(smokeNeed == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
     
     private void takeSmoke ()
