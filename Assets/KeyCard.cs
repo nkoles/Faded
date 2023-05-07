@@ -11,6 +11,7 @@ public class KeyCard : MonoBehaviour
     private BoxCollider2D keyCardTrigger;
     public GameObject keyCard;
     public bool hasKeyCard = false;
+    public GameObject icon;
     
     
     
@@ -19,21 +20,21 @@ public class KeyCard : MonoBehaviour
     {
         keyCardTrigger = GetComponent<BoxCollider2D>();
         spr.color = Random.ColorHSV();
+        icon = GameObject.FindWithTag("keyIcon");
+        icon.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        Debug.Log("KeyCard Triggered");
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag == "Player" && other.isTrigger == false)
         {
             hasKeyCard = true;
             spr.enabled = false;
+
+
+            icon.SetActive(true);
+            
+            Debug.Log("KeyCard Triggered");
         }
         
     }

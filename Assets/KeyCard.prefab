@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1906076619278721018}
   - component: {fileID: 1906076619278721021}
   - component: {fileID: 1906076619278721020}
-  m_Layer: 0
+  - component: {fileID: 810497817739548346}
+  m_Layer: 6
   m_Name: KeyCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +45,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -100,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -4556197565260342421, guid: f4984380d5803464ea0e8d1d47701f39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -127,3 +128,25 @@ MonoBehaviour:
   spr: {fileID: 1906076619278721021}
   keyCard: {fileID: 0}
   hasKeyCard: 0
+  icon: {fileID: 4719689713374528547, guid: a8600b340cc544c4a9b29b37e89f5fe7, type: 3}
+--- !u!50 &810497817739548346
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906076619278721023}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

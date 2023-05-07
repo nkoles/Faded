@@ -54,10 +54,10 @@ public class PlayerMove : MonoBehaviour
 
     void checkForWalls()
     {
-        var upHit = Physics2D.Raycast(transform.position, Vector2.up, 0.75f, wall);
-        var downHit = Physics2D.Raycast(transform.position, Vector2.down, 0.75f, wall);
-        var rightHit = Physics2D.Raycast(transform.position, Vector2.right, 0.75f, wall);
-        var leftHit = Physics2D.Raycast(transform.position, Vector2.left, 0.75f, wall);
+        var upHit = Physics2D.Raycast(transform.position, Vector2.up, 1f, wall);
+        var downHit = Physics2D.Raycast(transform.position, Vector2.down, 2f, wall);
+        var rightHit = Physics2D.Raycast(transform.position, Vector2.right, 1f, wall);
+        var leftHit = Physics2D.Raycast(transform.position, Vector2.left, 1f, wall);
         
         if(upHit.collider != null && upHit.collider.isTrigger == false)
             canMoveUp = false;

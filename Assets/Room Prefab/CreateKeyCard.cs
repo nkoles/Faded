@@ -5,20 +5,23 @@ using UnityEngine;
 public class CreateKeyCard : MonoBehaviour
 {
     public List<GameObject> keySpawnP = new List<GameObject>();
-    private int random;
+    public int random;
     public GameObject card;
     bool generated;
+    bool added;
+    public float timer = 5;
 
     void Update()
     {
-        keySpawnP.Add(GameObject.FindWithTag("keySpawn"));
+        timer -= Time.deltaTime;
+
         create();
     }
 
     // Start is called before the first frame update
     void create()
     {
-        if(keySpawnP.Count>=6)
+        if(timer<=0)
         {
             if(!generated)
             {
