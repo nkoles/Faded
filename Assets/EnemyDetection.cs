@@ -108,7 +108,6 @@ public class EnemyDetection : MonoBehaviour
         if(detected)
         {
             Vector3 playerDir = Player.transform.position - transform.position;
-            float speed = 0.5f;
 
             transform.Translate(playerDir*Time.deltaTime);
         }
